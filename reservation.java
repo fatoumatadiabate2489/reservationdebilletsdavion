@@ -15,7 +15,7 @@ public class reservation {
     public void afficher_reservation(){
         System.out.println("numero billet : "+numero_billet);
         System.out.println("vol : "+ vol);
-        System.out.println("paasager :"+passagers);
+        System.out.println("passager :"+passagers);
         System.out.println("reservation confirmee :"+comfirm_vol);
     }
 }
