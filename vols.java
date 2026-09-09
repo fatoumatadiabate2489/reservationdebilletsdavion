@@ -1,10 +1,10 @@
-public class vols {
+public class Vol {
     private String numero_vol ;
     private String depart;
     private String arrrive;
     private int prix;
     private int place_dispo;
-    public vols(String numero_vol, String depart, String arrive, int prix, int place_dispo){
+    public Vol(String numero_vol, String depart, String arrive, int prix, int place_dispo){
         this.numero_vol=numero_vol;
         this.depart=depart;
         this.arrrive=arrive;
@@ -28,4 +28,4 @@ public class vols {
         System.out.println("prix :"+prix);
         System.out.println("places disponibles : "+ place_dispo);
     }
-} 
+}
