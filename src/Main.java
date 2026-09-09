@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        vols vol1 = new vols(
+        Vol vol1 = new Vol(
             "AF123",
             "Ouagadougou",
             "Paris",
