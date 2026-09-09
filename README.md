@@ -23,7 +23,7 @@ Afin d'assurer une collaboration efficace et le suivi individuel sur Git/GitHub 
 - **Coéquipier 2** : structuration de la démonstration `Main.java`.
 
 ## Schéma UML d'Architecture
-![Schéma UML](schema.png)
+<img width="512" height="417" alt="Schema" src="https://github.com/user-attachments/assets/22e7e1c5-6063-459d-aa9e-b3257ca5e6ff" />
 
 ## 4. Instructions d'Exécution
 1. Cloner le dépôt sur votre environnement local :
