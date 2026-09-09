@@ -9,6 +9,6 @@ public class Passager {
     }
 
     public void afficherPassager() {
-        Systeme.out.println("Passager:"+ prenom +" "+nom+"(Passeport:"+ passeport + ")");
+        System.out.println("Passager:"+ prenom +" "+nom+"(Passeport:"+ passeport + ")");
     }
 }
