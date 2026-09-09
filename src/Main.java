@@ -1,12 +1,12 @@
 public class Main {
+
     public static void main(String[] args) {
-        vols vol1 = new vols(
+        Vol vol1 = new Vol(
             "AF123",
             "Ouagadougou",
             "Paris",
             500000,
-            3
-        );
+            3);
         System.out.println("===== INFORMATIONS DU VOL =====");
         vol1.afficher();
         Passager passager1 = new Passager(
@@ -18,7 +18,7 @@ public class Main {
         passager1.afficherPassager();
         System.out.println("\n===== RESERVATION D'UNE PLACE =====");
         vol1.reserver_place();
-        reservation reservation1 = new reservation(
+        Reservation reservation1 = new Reservation(
             1001,
             vol1,
             passager1,
@@ -31,4 +31,3 @@ public class Main {
         vol1.afficher();
     }
 }
-
