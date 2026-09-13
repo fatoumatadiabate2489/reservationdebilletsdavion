@@ -1,11 +1,11 @@
 public class Reservation {
     private int numero_billet;
-    private Vol vol;
+    private vol vol;
     private Passager passagers;
     private boolean confirm_vol =false;
     
 
-    public Reservation(int numero_billet, Vol vol, Passager passagers, boolean confirm_vol){
+    public Reservation(int numero_billet, vol vol, Passager passagers, boolean confirm_vol){
         this.numero_billet=numero_billet;
         this.confirm_vol=confirm_vol;
         this.vol=vol;
