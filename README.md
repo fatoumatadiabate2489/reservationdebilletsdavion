@@ -24,7 +24,8 @@ Afin d'assurer une collaboration efficace et le suivi individuel sur Git/GitHub 
 - **ZARE Mohamed Lamine Ridwan** : structuration de la démonstration `Main.java`,et finalisation avec les classes filles.
 
 ## Schéma UML d'Architecture
-![Schéma UML](schema.png)
+<img width="1280" height="800" alt="Diagramme" src="https://github.com/user-attachments/assets/123511c2-d949-454d-aea2-cdc9d8f940dc" />
+
 
 ## 4. Instructions d'Exécution
 1. Cloner le dépôt sur votre environnement local :
