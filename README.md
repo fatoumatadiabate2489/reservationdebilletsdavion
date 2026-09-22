@@ -19,7 +19,7 @@ L'application repose sur une architecture modulaire composée de 4 classes princ
 ## 3. Travail d'Équipe & Contributions
 Afin d'assurer une collaboration efficace et le suivi individuel sur Git/GitHub :
 - **DIABATE Fatoumata** : Implémentation de la classe `Passager.java` et rédaction de la documentation / présentation (`README.md`).
-- ** ZARE Mohamed LAMINE Ridwan** : Conception de la classe `Vol.java` et développment de la logique métier dans `Reservation.java`.
+- **ZARE Mohamed LAMINE Ridwan** : Conception de la classe `Vol.java` et développment de la logique métier dans `Reservation.java`.
 - **TRAORE Houd Ramamadan Tariq Togo** : structuration de la démonstration `Main.java`.
 
 ## Schéma UML d'Architecture
