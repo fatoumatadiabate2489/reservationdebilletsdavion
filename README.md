@@ -48,67 +48,8 @@ Afin d'assurer une collaboration efficace et le suivi individuel sur Git/GitHub 
 - TRAORE Tariq : Tests post-clonage et scénarios de validation dans Main.java
 
 ## Schéma UML d'Architecture
-classDiagram
-    class Reservable {
-        <<interface>>
-        +reserver() boolean
-        +annuler() boolean
-    }
+<img width="1076" height="1220" alt="image" src="https://github.com/user-attachments/assets/94d3f908-fc55-4763-ad46-8526b4ada0bf" />
 
-    class Passager {
-        <<abstract>>
-        #String nom
-        #String prenom
-        #String passeport
-        +Passager(nom: String, prenom: String, passeport: String)
-        +getNom() String
-        +getPrenom() String
-        +getPasseport() String
-        +calculerReduction()* double
-    }
-
-    class PassagerStandard {
-        -String siegeAssigne
-        +PassagerStandard(nom: String, prenom: String, passeport: String, siegeAssigne: String)
-        +getSiegeAssigne() String
-        +calculerReduction() double
-    }
-
-    class PassagerVIP {
-        -String codeFidelite
-        +PassagerVIP(nom: String, prenom: String, passeport: String, codeFidelite: String)
-        +getCodeFidelite() String
-        +calculerReduction() double
-    }
-
-    class Vol {
-        -String numeroVol
-        -String destination
-        -int capacite
-        +Vol(numeroVol: String, destination: String, capacite: int)
-        +getNumeroVol() String
-        +getDestination() String
-        +getCapacite() int
-    }
-
-    class Reservation {
-        -Passager passager
-        -Vol vol
-        +Reservation(passager: Passager, vol: Vol)
-        +confirm() void
-    }
-
-    class Main {
-        +main(args: String[]) void
-    }
-
-    Passager <|-- PassagerStandard : Héritage (extends)
-    Passager <|-- PassagerVIP : Héritage (extends)
-    Reservation ..|> Reservable : Implémentation (implements)
-    Reservation "1" --> "1" Passager : Associe
-    Reservation "1" --> "1" Vol : Associe
-    Main ..> Passager : Manipule (Polymorphisme)
-    Main ..> Reservation : Instancie
 
 ## 4. Instructions d'Exécution
 1. Cloner le dépôt sur votre environnement local :
