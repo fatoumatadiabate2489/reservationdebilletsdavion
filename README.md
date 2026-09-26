@@ -37,7 +37,7 @@ Le projet est entièrement structuré sous le répertoire src/ et respecte la r�
 - *Reservable.java* : Interface définissant le contrat d'opérations de réservation.
 
 ## 2 Déclaration d'usage de l'Intelligence Artificielle (IA)
-Conformément aux consignes, nous déclarons l'utilisation ponctuelle d'assistants IA (Gemini / ChatGPT) pour :
+Conformément aux consignes, nous déclarons l'utilisation ponctuelle d'assistants IA (Gemini) pour :
 1. La compréhension de la structuration des projets Java sous Git/GitHub.
 2. La relecture syntaxique des interfaces et de la documentation.
    
@@ -48,13 +48,67 @@ Afin d'assurer une collaboration efficace et le suivi individuel sur Git/GitHub 
 - TRAORE Tariq : Tests post-clonage et scénarios de validation dans Main.java
 
 ## Schéma UML d'Architecture
-<img width="1280" height="800" alt="Diagramme" src="https://github.com/user-attachments/assets/123511c2-d949-454d-aea2-cdc9d8f940dc" />
+classDiagram
+    class Reservable {
+        <<interface>>
+        +reserver() boolean
+        +annuler() boolean
+    }
 
-- **ZARE Mohamed LAMINE Ridwan** : Conception de la classe `Vol.java` et développment de la logique métier dans `Reservation.java`.
-- **TRAORE Houd Ramamadan Tariq Togo** : structuration de la démonstration `Main.java`.
+    class Passager {
+        <<abstract>>
+        #String nom
+        #String prenom
+        #String passeport
+        +Passager(nom: String, prenom: String, passeport: String)
+        +getNom() String
+        +getPrenom() String
+        +getPasseport() String
+        +calculerReduction()* double
+    }
 
-## Schéma UML d'Architecture
-<img width="512" height="417" alt="Schema" src="https://github.com/user-attachments/assets/22e7e1c5-6063-459d-aa9e-b3257ca5e6ff" />
+    class PassagerStandard {
+        -String siegeAssigne
+        +PassagerStandard(nom: String, prenom: String, passeport: String, siegeAssigne: String)
+        +getSiegeAssigne() String
+        +calculerReduction() double
+    }
+
+    class PassagerVIP {
+        -String codeFidelite
+        +PassagerVIP(nom: String, prenom: String, passeport: String, codeFidelite: String)
+        +getCodeFidelite() String
+        +calculerReduction() double
+    }
+
+    class Vol {
+        -String numeroVol
+        -String destination
+        -int capacite
+        +Vol(numeroVol: String, destination: String, capacite: int)
+        +getNumeroVol() String
+        +getDestination() String
+        +getCapacite() int
+    }
+
+    class Reservation {
+        -Passager passager
+        -Vol vol
+        +Reservation(passager: Passager, vol: Vol)
+        +confirm() void
+    }
+
+    class Main {
+        +main(args: String[]) void
+    }
+
+    Passager <|-- PassagerStandard : Héritage (extends)
+    Passager <|-- PassagerVIP : Héritage (extends)
+    Reservation ..|> Reservable : Implémentation (implements)
+    Reservation "1" --> "1" Passager : Associe
+    Reservation "1" --> "1" Vol : Associe
+    Main ..> Passager : Manipule (Polymorphisme)
+    Main ..> Reservation : Instancie
 
 ## 4. Instructions d'Exécution
 1. Cloner le dépôt sur votre environnement local :
