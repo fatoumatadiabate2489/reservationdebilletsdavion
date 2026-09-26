@@ -26,8 +26,14 @@ Afin d'assurer une collaboration efficace et le suivi individuel sur Git/GitHub 
 ## Schéma UML d'Architecture
 <img width="1280" height="800" alt="Diagramme" src="https://github.com/user-attachments/assets/123511c2-d949-454d-aea2-cdc9d8f940dc" />
 
+- **ZARE Mohamed LAMINE Ridwan** : Conception de la classe `Vol.java` et développment de la logique métier dans `Reservation.java`.
+- **TRAORE Houd Ramamadan Tariq Togo** : structuration de la démonstration `Main.java`.
+
+## Schéma UML d'Architecture
+<img width="512" height="417" alt="Schema" src="https://github.com/user-attachments/assets/22e7e1c5-6063-459d-aa9e-b3257ca5e6ff" />
 
 ## 4. Instructions d'Exécution
 1. Cloner le dépôt sur votre environnement local :
    ```bash
    <img width="1280" height="800" alt="Diagramme" src="https://github.com/user-attachments/assets/c119b505-f407-4dd8-b1b4-621662e0dae3" />
+   git clone <https://github.com/fatoumatadiabate2489/reservationdebilletsdavion>
