@@ -1,58 +1,56 @@
-public class Reservation implements Reservable {
+public class Vol {
 
-    private int numero_billet;
-    private Vol vol;
-    private Passager passager;
-    private boolean confirm_vol = false;
+    private String numero_vol;
+    private String depart;
+    private String arrive;
+    private int prix;
+    private int place_dispo;
 
-    public Reservation(  int numero_billet, Vol vol, Passager passager,  boolean confirm_vol) {
-        this.numero_billet = numero_billet;
-        this.vol = vol;
-        this.passager = passager;
-        this.confirm_vol = confirm_vol;
+    public Vol(String numero_vol,  String depart,String arrive,  int prix,  int place_dispo) {
+
+        this.numero_vol = numero_vol;
+        this.depart = depart;
+        this.arrive = arrive;
+        this.prix = prix;
+        this.place_dispo = place_dispo;
     }
-    @Override
-    public boolean reserver() {
 
-        if (confirm_vol) {
-            System.out.println("La réservation est déjà confirmée.");
-            return false;
-        }
-        if (vol.reserver_place()) {
-            confirm_vol = true;
-            System.out.println( "Réservation #" + numero_billet + " effectuée avec succès."
+    public boolean reserver_place() {
+
+        if (place_dispo > 0) {
+
+            place_dispo--;
+            System.out.println("Réservation effectuée.");
+            System.out.println( "Places restantes : " + place_dispo
             );
             return true;
         }
+        System.out.println(
+            "Désolé, il n'y a plus de places disponibles."
+        );
         return false;
     }
-    @Override
-    public boolean annuler() {
+    public void annuler_place() {
 
-        if (!confirm_vol) {
-           System.out.println( "La réservation n'est pas confirmée."  );
-            return false;
-        }
-        vol.annuler_place();
-        confirm_vol = false;
+        place_dispo++;
 
-        System.out.println( "Réservation #" + numero_billet + " annulée."  );
-        return true;
+        System.out.println(  "Place libérée."  );
+        System.out.println(  "Places disponibles : " + place_dispo    );
     }
-    @Override
-    public double calculerPrix() {
-        double prixBase = vol.getPrix();
-        double reduction = passager.calculerReduction();
-        return prixBase * (1 - reduction);
+    public int getPrix() {
+        return prix;
     }
-    public void confirm_reservation() {
-        confirm_vol = true;
+    public int getPlaceDispo() {
+        return place_dispo;
     }
-    public void afficher_reservation() {
-        System.out.println("----- RESERVATION -----");
-        System.out.println("Numéro billet : " + numero_billet);
-        System.out.println( "Passager : " + passager.getPrenom() + " " +passager.getNom());
-        System.out.println("Prix final : " + calculerPrix() );
-        System.out.println( "Réservation confirmée : " + confirm_vol );
+    public void afficher() {
+        System.out.println("----- VOL -----");
+        System.out.println("Numéro de vol : " + numero_vol);
+        System.out.println("Départ : " + depart);
+        System.out.println("Arrivée : " + arrive);
+        System.out.println("Prix : " + prix);
+        System.out.println(
+            "Places disponibles : " + place_dispo
+        );
     }
 }
