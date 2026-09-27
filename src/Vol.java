@@ -53,8 +53,6 @@ public class Reservation implements Reservable {
         System.out.println("Numéro billet : " + numero_billet);
         System.out.println( "Passager : " + passager.getPrenom() + " " +passager.getNom());
         System.out.println("Prix final : " + calculerPrix() );
-        System.out.println(
-            "Réservation confirmée : " + confirm_vol
-        );
+        System.out.println( "Réservation confirmée : " + confirm_vol );
     }
 }
