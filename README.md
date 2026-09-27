@@ -37,7 +37,7 @@ Le projet est entièrement structuré sous le répertoire src/ et respecte la r�
 - *Reservable.java* : Interface définissant le contrat d'opérations de réservation.
 
 ## 2 Déclaration d'usage de l'Intelligence Artificielle (IA)
-Conformément aux consignes, nous déclarons l'utilisation ponctuelle d'assistants IA (Gemini) pour :
+Conformément aux consignes, nous déclarons l'utilisation ponctuelle d'assistants IA (Gemini/Claude) pour :
 1. La compréhension de la structuration des projets Java sous Git/GitHub.
 2. La relecture syntaxique des interfaces et de la documentation.
    
