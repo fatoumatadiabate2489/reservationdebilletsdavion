@@ -48,7 +48,8 @@ Afin d'assurer une collaboration efficace et le suivi individuel sur Git/GitHub 
 - TRAORE Tariq : Tests post-clonage et scénarios de validation dans Main.java
 
 ## Schéma UML d'Architecture
-<img width="1076" height="1220" alt="image" src="https://github.com/user-attachments/assets/94d3f908-fc55-4763-ad46-8526b4ada0bf" />
+<img width="836" height="1080" alt="image" src="https://github.com/user-attachments/assets/c3ac7e2f-e713-40a3-b13d-5b0ee4f90edc" />
+
 
 
 ## 4. Instructions d'Exécution
