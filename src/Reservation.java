@@ -22,59 +22,39 @@ public class Reservation implements Reservable {
 
         if (vol.reserver_place()) {
             confirm_vol = true;
-            System.out.println(
-                "Réservation #" + numero_billet +
-                " effectuée avec succès."
+            System.out.println( "Réservation #" + numero_billet + " effectuée avec succès."
             );
             return true;
         }
         return false;
     }
-
     @Override
     public boolean annuler() {
 
         if (!confirm_vol) {
-            System.out.println(
-                "La réservation n'est pas confirmée."
-            );
+            System.out.println(  "La réservation n'est pas confirmée." );
             return false;
         }
 
         vol.annuler_place();
         confirm_vol = false;
-
-        System.out.println(
-            "Réservation #" + numero_billet +
-            " annulée."
-        );
+        System.out.println( "Réservation #" + numero_billet +" annulée."  );
         return true;
     }
-
     @Override
     public double calculerPrix() {
         double prixBase = vol.getPrix();
         double reduction = passager.calculerReduction();
         return prixBase * (1 - reduction);
     }
-
     public void confirm_reservation() {
         confirm_vol = true;
     }
-
     public void afficher_reservation() {
-        System.out.println("----- RESERVATION -----");
+        System.out.println("RESERVATION ");
         System.out.println("Numéro billet : " + numero_billet);
-        System.out.println(
-            "Passager : " +
-            passager.getPrenom() + " " +
-            passager.getNom()
-        );
-        System.out.println(
-            "Prix final : " + calculerPrix()
-        );
-        System.out.println(
-            "Réservation confirmée : " + confirm_vol
-        );
+        System.out.println( "Passager : " + passager.getPrenom() + " " + passager.getNom() );
+        System.out.println( "Prix final : " + calculerPrix()  );
+        System.out.println( "Réservation confirmée : " + confirm_vol );
     }
 }
